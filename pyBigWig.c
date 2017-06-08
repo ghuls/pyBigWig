@@ -1597,6 +1597,8 @@ PyMODINIT_FUNC PyInit_pyBigWig(void) {
 #else
     PyModule_AddIntConstant(res, "remote", 1);
 #endif
+    //Add __version__
+    PyModule_AddStringConstant(res, "__version__", "0.3.5");
 
     return res;
 }
@@ -1622,5 +1624,7 @@ PyMODINIT_FUNC initpyBigWig(void) {
 #else
     PyModule_AddIntConstant(res, "remote", 1);
 #endif
+    //Add __version__
+    PyModule_AddStringConstant(res, "__version__", "0.3.5");
 }
 #endif
